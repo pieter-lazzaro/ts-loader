@@ -76,7 +76,7 @@ function formatErrors(diagnostics: typescript.Diagnostic[], compiler: typeof typ
             var errorCategory = compiler.DiagnosticCategory[diagnostic.category].toLowerCase();
             var errorCategoryAndCode = errorCategory + ' TS' + diagnostic.code + ': ';
         
-            var messageText = errorCategoryAndCode + compiler.flattenDiagnosticMessageText(diagnostic.messageText, os.EOL);
+            var messageText = errorCategoryAndCode + compiler.flattenDiagnosticMessageText(diagnostic.messageText, ' ');
             if (diagnostic.file) {
                 var lineChar = diagnostic.file.getLineAndCharacterOfPosition(diagnostic.start);
                 return {
