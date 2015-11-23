@@ -322,6 +322,8 @@ function ensureTypeScriptInstance(options: Options, loader: any): { instance?: T
                     if (resolvedFileName) {
                         if (resolvedFileName == tsResolution.resolvedModule.resolvedFileName) {
                             resolutionResult.isExternalLibraryImport = tsResolution.resolvedModule.isExternalLibraryImport;
+                        } else {
+                            resolutionResult = tsResolution.resolvedModule;   
                         }
                     }
                     else resolutionResult = tsResolution.resolvedModule;
