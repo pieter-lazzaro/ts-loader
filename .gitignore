@@ -7,3 +7,5 @@ npm-debug.log
 !/test/**/expectedOutput/**
 /node_modules
 !build.js
+!index.js
+!resolver.js
